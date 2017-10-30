@@ -29,7 +29,7 @@ kind: Deployment
 metadata:
   name: {{build.name}}
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
   template:
@@ -43,4 +43,4 @@ spec:
         imagePullPolicy: Always
         ports:
         - name: http-api
-          containerPort: 5000
+          containerPort: 8080

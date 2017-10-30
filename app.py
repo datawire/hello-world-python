@@ -14,7 +14,7 @@ def elapsed():
 
 @app.route('/')
 def root():
-    return "Hello World! (up %s)\n" % elapsed()
+    return "Hello World (Python)! (up %s)\n" % elapsed()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
