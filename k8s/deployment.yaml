@@ -41,6 +41,13 @@ spec:
       - name: {{build.name}}
         image: {{build.images["Dockerfile"]}}
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: 0.1G
+            cpu: 0.1
+          limits:
+            memory: {{build.profile.max_memory}}
+            cpu: {{build.profile.max_cpu}}
         ports:
         - name: http-api
           containerPort: 8080

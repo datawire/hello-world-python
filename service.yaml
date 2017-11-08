@@ -6,18 +6,12 @@ profiles:
     max_memory: 0.5G
     max_cpu: 0.5
   canary:
-    name: {{branch.replace('/', '-')}}
     endpoint: /hello/
     weight: 10.0 # percentage of traffic to route to this class of deployment
-    max_memory: 0.5G
-    max_cpu: 0.5G
-  default:
-    name: {{branch.replace('/', '-')}}
-    endpoint: /preview/{{branch}}/
     max_memory: 0.25G
     max_cpu: 0.25
-
-branches:
-  master: stable
-  dev/*: default
-  canary/*: canary
+  default:
+    name: {{branch.replace('/', '-')}}
+    endpoint: /preview/hello/
+    max_memory: 0.25G
+    max_cpu: 0.25
