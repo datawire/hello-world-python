@@ -12,6 +12,6 @@ profiles:
     max_cpu: 0.25
   default:
     name: {{branch.replace('/', '-')}}
-    endpoint: /preview/hello/
+    endpoint: /preview/{{branch}}/
     max_memory: 0.25G
     max_cpu: 0.25
