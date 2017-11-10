@@ -7,7 +7,7 @@ metadata:
   annotations:
     ambassador: |
       ---
-      apiVersion: ambassador/v1
+      apiVersion: ambassador/v0
       kind: Mapping
       name: {{build.name}}-mapping
       prefix: {{build.profile.endpoint}}
