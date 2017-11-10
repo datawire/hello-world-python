@@ -5,7 +5,7 @@ metadata:
   name: {{build.name}}
   {%- if "endpoint" in build.profile %}
   annotations:
-    ambassador: |
+    getambassador.io/config: |
       ---
       apiVersion: ambassador/v0
       kind: Mapping
