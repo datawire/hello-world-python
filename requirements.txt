@@ -1,1 +1,2 @@
 flask
+werkzeug==0.14.1
