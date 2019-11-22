@@ -24,11 +24,14 @@ spec:
       targetPort: http-api
   type: ClusterIP
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{build.name}}
 spec:
+  selector:
+    matchLabels:
+      app: {{build.name}}
   replicas: 1
   strategy:
     type: RollingUpdate
